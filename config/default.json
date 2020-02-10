@@ -1,0 +1,39 @@
+{
+  "host": "lvh.me",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "ZTnwNs4Mrrfq9TJ3yjC+7RSV3vw=",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "oauth": {
+      "redirect": "/",
+      "github": {
+        "key": "d7434fd19c80943454ea",
+        "secret": "6dd0ed4d416dd5de00fb6285d3a087e3c68501d6"
+      }
+    }
+  },
+  "nedb": "../data"
+}
